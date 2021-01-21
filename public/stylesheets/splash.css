@@ -1,0 +1,69 @@
+@import "style.css";
+
+.menuBoard{
+    height: 300px;
+    width: 300px;
+  
+    margin: auto;
+    display: grid;
+  
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1f;
+    grid-gap: 5px;
+    background-color: #686d76;
+  }
+  
+  .grid-item {
+    background-color: #19d3da;
+    animation-name: MenuAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+
+
+  @keyframes MenuAnimation {
+    0%   {background-color:#19d3da; width: 90%}
+    1.5%  {background-color:#19d3da; width: 0%}
+    1.51%  {background-color:#eeeeee;}
+    3% { background-color:#eeeeee; width: 90%}
+
+
+    50%   {background-color:#eeeeee; width: 90%}
+    51.5%  {background-color:#eeeeee; width: 0%}
+    51.51%  {background-color:#19d3da;}
+    53% { background-color:#19d3da; width: 90%}
+    100% {background-color: #19d3da}
+  }
+
+  .playButton{
+    font-size: 50px;
+    color:#eeeeee;
+    outline-color: #686d76;
+  }
+
+  .playButton:hover{
+    background-color: #19d3da;
+
+    transition-duration: .2s;
+  }
+  .playButton:active{
+    color:#373a40;
+  }
+
+  .textBox{
+    color: #eeeeee;
+  }
+
+  .textBoxTitle{
+      font-size: 20px;
+  }
+
+  .statistic {
+    font-weight: bold;
+  }
+
+  .statistic::after, .statistic::before{
+      content: " - ";
+  }
+
